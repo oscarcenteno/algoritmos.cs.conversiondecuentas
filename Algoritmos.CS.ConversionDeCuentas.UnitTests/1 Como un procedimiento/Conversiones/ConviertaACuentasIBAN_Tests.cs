@@ -7,7 +7,7 @@ namespace ComoUnProcedimiento
     public class ConviertaACuentasIBAN_Tests : Escenarios
     {
         private List<string> elResultadoEsperado;
-        private IEnumerable<string> lasCuentasNacionales;
+        private IEnumerable<string> lasCuentas;
         private List<string> elResultadoObtenido;
 
         [TestMethod()]
@@ -15,30 +15,30 @@ namespace ComoUnProcedimiento
         {
             elResultadoEsperado = UnaListaVacia();
 
-            lasCuentasNacionales = UnaListaSinCuentas();
-            elResultadoObtenido = Conversiones.ConviertaACuentasIBAN(lasCuentasNacionales);
+            lasCuentas = UnaListaSinCuentas();
+            elResultadoObtenido = Conversiones.ConviertaACuentasIBAN(lasCuentas);
 
             CollectionAssert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
 
         [TestMethod()]
-        public void ConviertaACuentasIBAN_UnaListaConUnaCuenta_UnaListaConUnaCuentaConvertida()
+        public void ConviertaACuentasIBAN_UnaListaConUnaCuenta_UnaListaConUnaConvertida()
         {
             elResultadoEsperado = UnaListaConUnaCuentaConvertida();
 
-            lasCuentasNacionales = UnaListaConUnaCuenta();
-            elResultadoObtenido = Conversiones.ConviertaACuentasIBAN(lasCuentasNacionales);
+            lasCuentas = UnaListaConUnaCuenta();
+            elResultadoObtenido = Conversiones.ConviertaACuentasIBAN(lasCuentas);
 
             CollectionAssert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
 
         [TestMethod()]
-        public void ConviertaACuentasIBAN_VariasCuentas_UnaListaConElMismoNumeroDeCuentas()
+        public void ConviertaACuentasIBAN_UnaListaConTresCuentas_UnaListaConTresConvertidas()
         {
             elResultadoEsperado = UnaListaConVariasCuentas();
 
-            lasCuentasNacionales = UnaListaConElMismoNumeroDeCuentas();
-            elResultadoObtenido = Conversiones.ConviertaACuentasIBAN(lasCuentasNacionales);
+            lasCuentas = UnaListaConElMismoNumeroDeCuentas();
+            elResultadoObtenido = Conversiones.ConviertaACuentasIBAN(lasCuentas);
 
             CollectionAssert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
