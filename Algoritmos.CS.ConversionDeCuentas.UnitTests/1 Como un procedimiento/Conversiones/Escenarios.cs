@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ComoUnProcedimiento
+namespace ComoUnProcedimiento 
 {
     public class Escenarios
     {
@@ -30,22 +30,22 @@ namespace ComoUnProcedimiento
             return lasCuentas;
         }
 
-        protected List<string> UnaListaConElMismoNumeroDeCuentas()
-        {
-            List<string> lasCuentas = new List<string>();
-            lasCuentas.Add("10200009007408120");
-            lasCuentas.Add("10000073919007800");
-            lasCuentas.Add("10000223423437800");
-
-            return lasCuentas;
-        }
-
         protected List<string> UnaListaConVariasCuentas()
         {
             List<string> lasCuentas = new List<string>();
             lasCuentas.Add("CR1010200009007408120");
             lasCuentas.Add("CR0910000073919007800");
             lasCuentas.Add("CR4410000223423437800");
+
+            return lasCuentas;
+        }
+
+        protected List<string> UnaListaConVariasCuentasConvertidas()
+        {
+            List<string> lasCuentas = new List<string>();
+            lasCuentas.Add("10200009007408120");
+            lasCuentas.Add("10000073919007800");
+            lasCuentas.Add("10000223423437800");
 
             return lasCuentas;
         }

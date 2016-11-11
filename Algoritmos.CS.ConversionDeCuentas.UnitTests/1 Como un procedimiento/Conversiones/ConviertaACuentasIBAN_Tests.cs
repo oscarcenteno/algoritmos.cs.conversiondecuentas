@@ -37,7 +37,7 @@ namespace ComoUnProcedimiento
         {
             elResultadoEsperado = UnaListaConVariasCuentas();
 
-            lasCuentas = UnaListaConElMismoNumeroDeCuentas();
+            lasCuentas = UnaListaConVariasCuentasConvertidas();
             elResultadoObtenido = Conversiones.ConviertaACuentasIBAN(lasCuentas);
 
             CollectionAssert.AreEqual(elResultadoEsperado, elResultadoObtenido);
